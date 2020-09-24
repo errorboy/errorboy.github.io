@@ -1,0 +1,37 @@
+.button__up{
+    position: fixed;
+    z-index: 999;
+    bottom: -50px;
+    width: 40px;
+    height: 40px;
+    background-color: #6c757d;
+    border-radius: 100%;
+    transition: bottom .3s ease-in-out;
+    &::after{
+        content: '\25B2';
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0  ;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+    }
+    &_visible{
+        bottom: 10px;
+        transition: bottom .3s ease-in-out;
+    }
+    
+}
+
+@media(min-width:769px){
+    .button__up{
+        cursor: pointer;
+        transition: bottom .3s ease-in-out, background-color .2s linear;
+        &:hover{
+            background-color: $accent-color;
+            transition: background-color .2s linear;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.button{
+    width: 49%;
+    border-radius: 10px;
+    >a{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 10px;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    &_review{
+        border: 1px solid $gray;
+        >a{
+            color: gray;
+            &:hover{
+                color: $accent-color;
+            }
+        }
+    }
+    &_play{
+        background-color:$accent-color;
+    }
+    &_more-center{
+        width: 150px;
+        margin: 0 auto;
+        background-color:$accent-color;
+    }
+}
+
+
+@media(min-width:769px){
+    .button{
+        &_review{
+            width: 100%;
+        }
+        &_play{
+            width: 100%;
+            
+            &:hover{
+                animation: pulse 1s infinite;
+            }
+        }
+
+
+    }
+}
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
